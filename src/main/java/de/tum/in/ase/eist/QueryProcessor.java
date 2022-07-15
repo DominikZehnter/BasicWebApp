@@ -17,7 +17,7 @@ public class QueryProcessor {
             if (query.contains("what is")) {
                 String[] a = query.split("what is ");
                 String numbers = a[1];
-                String[] b = query.split(" plus ");
+                String[] b = numbers.split(" plus ");
                 int bi1 = Integer.parseInt(b[0]);
                 int bi = Integer.parseInt(b[1]);
                 return String.valueOf(bi1 + bi);
