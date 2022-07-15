@@ -16,10 +16,11 @@ public class QueryProcessor {
         } else { // TODO extend the programm here
             if (query.contains("what is")) {
                 String[] a = query.split("what is ");
-                String[] b = query.split("plus ");
-                int ai = Integer.parseInt(a[1]);
+                String numbers = a[1];
+                String[] b = query.split(" plus ");
+                int bi1 = Integer.parseInt(b[0]);
                 int bi = Integer.parseInt(b[1]);
-                return String.valueOf(ai + bi);
+                return String.valueOf(bi1 + bi);
 
             }
             return "";
