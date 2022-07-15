@@ -14,7 +14,7 @@ public class QueryProcessor {
         } else if (query.contains("name")) {
             return "Dominik";
         } else { // TODO extend the programm here
-
+            query.replaceAll("%20", " ");
             if (query.contains("what is")) {
                 String[] a = query.split("what is ");
                 String numbers = a[0];
@@ -29,6 +29,7 @@ public class QueryProcessor {
         }
 
     }
+    
 
 
 }
