@@ -15,8 +15,8 @@ public class QueryProcessor {
             return "Dominik";
         } else { // TODO extend the programm here
             if (query.contains("what is")) {
-                String[] a = query.split("what is");
-                String[] b = query.split("plus");
+                String[] a = query.split("what is ");
+                String[] b = query.split("plus ");
                 int ai = Integer.parseInt(a[1]);
                 int bi = Integer.parseInt(b[1]);
                 return String.valueOf(ai + bi);
