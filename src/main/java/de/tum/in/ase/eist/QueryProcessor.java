@@ -14,14 +14,19 @@ public class QueryProcessor {
         } else if (query.contains("name")) {
             return "Dominik";
         } else { // TODO extend the programm here
-            if (query.contains("what is")) {
-                String[] a = query.split("what is ");
-                String numbers = a[1];
-                String[] b = numbers.split(" plus ");
-                int bi1 = Integer.parseInt(b[0]);
-                int bi = Integer.parseInt(b[1]);
-                return String.valueOf(bi1 + bi);
+            try {
+                if (query.contains("what is")) {
+                    String[] a = query.split("what is ");
+                    String numbers = a[1];
+                    String[] b = numbers.split(" plus ");
+                    int bi1 = Integer.parseInt(b[0]);
+                    int bi = Integer.parseInt(b[1]);
+                    return String.valueOf(bi1 + bi);
 
+                }
+            }
+            catch (Error e){
+                return "";
             }
             return "";
         }
